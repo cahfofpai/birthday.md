@@ -3,6 +3,7 @@
 Organize the birthdays of your friends using a Markdown-like file format! Convert your birthday.md file to .ics and import it into your calendar to never miss a birthday again!
 
 ## CLI tool
+
 Reads your birthday.md file line by line and converts the entries to .ics calendar events.
 
 Syntax: `birthday-md <input file> <output file>`
@@ -33,6 +34,12 @@ dd.mm.yyyy <name>
 * invalid lines
     * everything else
     * for every invalid line an error message is printed
+
+## Usage on Android
+
+You can compile and run the birthday.md tool directly on your Android phone using [Termux](https://termux.dev). Alternatively, you can run it on your computer and copy / sync the ics file to Android.
+
+To add the birthday events from the .ics file to your calendar you can use the Android app [ICSx⁵](https://icsx5.bitfire.at).
 
 ## Usage of AI tools
 
