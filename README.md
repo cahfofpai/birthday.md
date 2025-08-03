@@ -35,11 +35,31 @@ dd.mm.yyyy <name>
     * everything else
     * for every invalid line an error message is printed
 
-## Usage on Android
+## Usage
+### General
+
+Run: `go run cmd/birthday-md/main.go`
+
+Build: `go build -o birthday-md cmd/birthday-md/main.go`
+
+### Android
 
 You can compile and run the birthday.md tool directly on your Android phone using [Termux](https://termux.dev). Alternatively, you can run it on your computer and copy / sync the ics file to Android.
 
 To add the birthday events from the .ics file to your calendar you can use the Android app [ICSx⁵](https://icsx5.bitfire.at).
+
+### Makefile
+
+You can use a Makefile to ensure that the .ics file is only regenerated if the .md file has changed. This is useful if you want to execute birthday-md automatically on a regular basis to keep the .ics file up to date.
+
+Example Makefile:
+
+```make
+birthdays.ics: birthdays.md
+    birthday-md "birthdays.md" "birthdays.ics"
+```
+
+Then you can execute it by simply calling `make`.
 
 ## Usage of AI tools
 
